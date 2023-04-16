@@ -4,6 +4,6 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
-output "Image ID" {
+output "Image_ID" {
   value = data.aws_ami.ami.image_id
 }
