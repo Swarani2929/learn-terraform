@@ -26,11 +26,11 @@ output "sample2" {
 variable "sample3" {
 default = "Hello"
 }
-
+# Variable with key = list
 variable "sample4" {
   default = ["Hi", 123, "Bye"]
 }
-
+# Variable with key = key {map}
 variable "sample5" {
   default = {
     string  = "Hello",
