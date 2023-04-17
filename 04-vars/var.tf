@@ -20,3 +20,25 @@ variable "sample2" {}
 output "sample2" {
   value=var.sample2
 }
+
+# Variable with key = value
+
+variable "sample3" {
+default = "Hello"
+}
+
+variable "sample4" {
+  default = ["Hi", 123, "Bye"]
+}
+
+variable "sample5" {
+  default = {
+    string  = "Hello",
+    number  = 234,
+    boolean = "false"
+  }
+}
+
+output "types" {
+  value = "First value = ${var.sample3}, List values = ${var.sample4[1]}, Map values = ${var.sample5[number]}"
+}
