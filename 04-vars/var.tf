@@ -40,5 +40,5 @@ variable "sample5" {
 }
 
 output "types" {
-  value = "First value = ${var.sample3}, List values = ${var.sample4[1]}, Map values = ${var.sample5[number]}"
+  value = "First value = ${var.sample3}, List values = ${var.sample4[1]}, Map values = ${var.sample5["number"]}"
 }
