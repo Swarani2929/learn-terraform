@@ -25,6 +25,7 @@ resource "aws_instance" "mongodb" {
     Name = "mongodb"
   }
 }
+
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "mongodb-dev.devops25.online"
@@ -32,6 +33,7 @@ resource "aws_route53_record" "mongodb" {
   ttl     = 300
   records = [aws_instance.mongodb.private_ip]
 }
+
 resource "aws_instance" "catalogue" {
 
   ami = "ami-0089b8e98cd95257d"
@@ -41,6 +43,7 @@ resource "aws_instance" "catalogue" {
     Name = "catalogue"
   }
 }
+
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "catalogue-dev.devops25.online"
@@ -48,6 +51,7 @@ resource "aws_route53_record" "catalogue" {
   ttl     = 300
   records = [aws_instance.catalogue.private_ip]
 }
+
 resource "aws_instance" "redis" {
 
   ami = "ami-0089b8e98cd95257d"
@@ -57,6 +61,7 @@ resource "aws_instance" "redis" {
     Name = "redis"
   }
 }
+
 resource "aws_route53_record" "redis" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "redis-dev.devops25.online"
@@ -64,6 +69,7 @@ resource "aws_route53_record" "redis" {
   ttl     = 300
   records = [aws_instance.redis.private_ip]
 }
+
 resource "aws_instance" "user" {
 
   ami = "ami-0089b8e98cd95257d"
@@ -73,6 +79,7 @@ resource "aws_instance" "user" {
     Name = "user"
   }
 }
+
 resource "aws_route53_record" "user" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "user-dev.devops25.online"
@@ -80,6 +87,7 @@ resource "aws_route53_record" "user" {
   ttl     = 300
   records = [aws_instance.user.private_ip]
 }
+
 resource "aws_instance" "cart" {
 
   ami = "ami-0089b8e98cd95257d"
@@ -89,6 +97,7 @@ resource "aws_instance" "cart" {
     Name = "cart"
   }
 }
+
 resource "aws_route53_record" "cart" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "cart-dev.devops25.online"
@@ -106,6 +115,7 @@ resource "aws_instance" "mysql" {
     Name = "mysql"
   }
 }
+
 resource "aws_route53_record" "mysql" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "mysql-dev.devops25.online"
@@ -123,6 +133,7 @@ resource "aws_instance" "shipping" {
     Name = "shipping"
   }
 }
+
 resource "aws_route53_record" "shipping" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "shipping-dev.devops25.online"
@@ -140,6 +151,7 @@ resource "aws_instance" "rabbitmq" {
     Name = "rabbitmq"
   }
 }
+
 resource "aws_route53_record" "rabbitmq" {
   zone_id = "Z06113993FP8Y6SPFD2JT"
   name    = "rabbitmq-dev.devops25.online"
