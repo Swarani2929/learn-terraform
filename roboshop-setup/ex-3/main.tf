@@ -14,7 +14,6 @@ resource "aws_instance" "ec2" {
   }
 }
 
-
 variable "instances" {
 
   default = {
@@ -28,3 +27,9 @@ variable "instances" {
     }
   }
   }
+
+output "ec2" {
+
+  value = [ for k, v in aws_instance.instances: v.public_ip ]
+
+}
