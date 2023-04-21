@@ -2,9 +2,9 @@ module "ec2" {
   for_each = var.instances
   source ="./ec2"
 }
-
-module "sg"
-
+module "sg" {
+  source = "./sg"
+}
 variable "instances" {
   default = {
     catalogue = {
