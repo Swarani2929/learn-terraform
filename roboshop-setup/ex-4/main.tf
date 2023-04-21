@@ -16,3 +16,4 @@ variable "instances" {
       type = "t3.small"
     }
   }
+}
